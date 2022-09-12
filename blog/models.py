@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0,"Draft"), (1,"Published"))
-
+GENDER = ((0,"All"), (1,"Male"), (2,"Female"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -16,6 +16,9 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateField(auto_now_add=True)
     updated_on = models.DateField(auto_now=True)
+    eligible_age_min = models.IntegerField(blank=False, default=0)
+    eligible_age_max = models.IntegerField(blank=False, default=100)
+    gender = models.IntegerField(choices=GENDER, default=0)
 
     class Meta:
         ordering = ["-created_on"]
