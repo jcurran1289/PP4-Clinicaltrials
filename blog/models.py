@@ -9,6 +9,9 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipe_post", default=0)
+    eligible_age_min = models.IntegerField(blank=False, default=0)
+    eligible_age_max = models.IntegerField(blank=False, default=100)
+    gender = models.IntegerField(choices=GENDER, default=0)
     main_image = CloudinaryField('image', default='placeholder')
     excerpt = models.CharField(max_length=500, blank=True)
     content = models.TextField()
@@ -16,9 +19,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateField(auto_now_add=True)
     updated_on = models.DateField(auto_now=True)
-    eligible_age_min = models.IntegerField(blank=False, default=0)
-    eligible_age_max = models.IntegerField(blank=False, default=100)
-    gender = models.IntegerField(choices=GENDER, default=0)
+
 
     class Meta:
         ordering = ["-created_on"]

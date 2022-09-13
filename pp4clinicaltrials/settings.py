@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["pp4clinicaltrials.herokuapp.com", "localhost"]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-jcurran1289-pp4clinical-3qky35xv0hr.ws-us64.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-jcurran1289-pp4clinical-3qky35xv0hr.ws-us65.gitpod.io']
 
 # Application definition
 
@@ -44,12 +44,21 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
     'blog',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
