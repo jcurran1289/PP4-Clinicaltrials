@@ -1,37 +1,62 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="container">
-
-    {% for post in post_list %}
-    <!-- Post preview-->
-    <div class="post-preview">
-        <a href="{% url 'post_detail' post.slug %}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            <h3 class="post-subtitle">{{ post.excerpt }}</h3>
-        </a>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
         <div class="row">
-            <div class="col-4 post-meta ">
-                <p class="post-meta">
-                    Diseases:
-                </p>
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Clinical Trials at NYC Hospital</h1>
+                    <span class="subheading">Participating in our clinical trials gives you access to the latest
+                        treatments and helps improve for generations to come</span>
+                </div>
             </div>
-            <div class="col-4 post-meta ">
-                <p class="post-meta">
-                    Age: {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
-                </p>
-            </div>
-            <div class="col-4 post-meta gender">
-                <p class="post-meta">
-                    Gender: {{post.gender}}
-                </p>
-            </div>
+        </div>
+    </div>
+</header>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Main Content -->
 
+            <!-- Content Goes here -->
+
+
+
+            <div class="container">
+
+                {% for post in post_list %}
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a href="{% url 'post_detail' post.slug %}">
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        <h3 class="post-subtitle">{{ post.excerpt }}</h3>
+                    </a>
+                    <div class="row">
+                        <div class="col-4 post-meta ">
+                            <p class="post-meta">
+                                Diseases:
+                            </p>
+                        </div>
+                        <div class="col-4 post-meta ">
+                            <p class="post-meta">
+                                Age: {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
+                            </p>
+                        </div>
+                        <div class="col-4 post-meta gender">
+                            <p class="post-meta">
+                                Gender: {{post.gender}}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 <!-- Divider-->
 <hr class="my-4" />
 

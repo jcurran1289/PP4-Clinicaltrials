@@ -68,34 +68,9 @@
             </div>
         </div>
     </nav>
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>Clinical Trials at NYC Hospital</h1>
-                        <span class="subheading">Participating in our clinical trials gives you access to the latest
-                            treatments and helps improve for generations to come</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Main Content -->
-                    {% block content %}
-                    <!-- Content Goes here -->
-                    {% endblock content %}
-              
-            </div>
-        </div>
-    </div>
-
+    {% block content %}
+ 
+    {% endblock content %}
     <hr>
 
     <!-- Footer -->
