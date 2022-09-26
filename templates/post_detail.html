@@ -3,35 +3,53 @@
 {% block content %}
 
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('static/img/post-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1>{{ post.title }}</h1>
-            <h2 class="subheading">{{post.excerpt}}</h2>
-            <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2019</span>
-          </div>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{ post.title }}</h1>
+          <h2 class="subheading">{{post.excerpt}}</h2>
+          <span class="meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on August 24, 2019</span>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 mx-auto">
-          <p>Principal Investigator: jAMES CURRAN</p>
-        </div>
-        <div class="col-lg-6 col-md-6 mx-auto">
-          <p>IRB Number: 18-15-5544</p>
-        </div>
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>Principal Investigator: {{post.prin_invest}}</p>
+      </div>
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>IRB Number: {{post.irb_number}}</p>
       </div>
     </div>
-  </article>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>Principal Investigator: {{post.contact_name}}</p>
+      </div>
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>IRB Number: {{post.irb_number}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 mx-auto">
+      <p>Principal Investigator: {{post.contact_email}}</p>
+    </div>
+    <div class="col-lg-6 col-md-6 mx-auto">
+      <p>IRB Number: {{post.irb_number}}</p>
+    </div>
+  </div>
+  </div>
+  </div>
+</article>
 {% endblock content %}
