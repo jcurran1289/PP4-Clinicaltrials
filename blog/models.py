@@ -18,7 +18,7 @@ class Post(models.Model):
     gender = models.IntegerField(choices=GENDER, default=0)
     main_image = CloudinaryField('image', default='placeholder')
     content = models.CharField(max_length=5000, blank=True)
-    no_participants = models.ManyToManyField(User, related_name='no_participants', blank=True)
+    no_participants = models.ManyToManyField(User, related_name='ct_no_participants', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     start_dt = models.DateField(default='2022-09-22')
     end_dt = models.DateField(default = '2022-09-22')
@@ -32,8 +32,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def number_of_likes(self):
-        return self.likes.count()
+    def no_enrolled(self):
+        return self.no_participants.count()
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
