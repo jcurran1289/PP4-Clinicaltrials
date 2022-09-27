@@ -34,38 +34,57 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-6 mx-auto">
-        <p>Principal Investigator: {{post.contact_name}}</p>
+        <p>Contact Name: {{post.contact_name}}</p>
       </div>
       <div class="col-lg-6 col-md-6 mx-auto">
-        <p>IRB Number: {{post.irb_number}}</p>
+        <p>Contact Email: {{post.contact_email}}</p>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-md-6 mx-auto">
-      <p>Principal Investigator: {{post.contact_email}}</p>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>Age: {{post.eligible_age_min}} - {{post.eligible_age_max}}</p>
+      </div>
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>Gender: {{post.gender}}</p>
+      </div>
     </div>
-    <div class="col-lg-6 col-md-6 mx-auto">
-      <p>IRB Number: {{post.irb_number}}</p>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>Start Date: {{post.start_dt}}</p>
+      </div>
+      <div class="col-lg-6 col-md-6 mx-auto">
+        <p>End Date: {{post.end_dt}}</p>
+      </div>
     </div>
-  </div>
-  <div class="col-1">
-    <strong>
-      {% if user.is_authenticated %}
-      <form class="d-inline" action="{% url 'post_enroll' post.slug %}" method="POST">
-        {% csrf_token %}
-        {% if liked %}
-        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" style="color: blue">Submit</button>
-        {% else %}
-        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" style="color: red">Submit</button>
-        {% endif %}
-      </form>
-      {% else %}
-      <span class="text-secondary"></span>
-      {% endif %}
-      <!-- The number of likes goes before the closing strong tag -->
-      <span class="text-secondary">{{ post.no_enrolled }} </span>
-    </strong>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <p>{{post.content | safe }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <strong>
+          {% if user.is_authenticated %}
+          <form class="d-inline" action="{% url 'post_enroll' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
+              style="color: blue">Enroll</button>
+            {% else %}
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
+              style="color: red">Leave</button>
+            {% endif %}
+          </form>
+          {% else %}
+          <span class="text-secondary"></span>
+          {% endif %}
+          <!-- The number of likes goes before the closing strong tag -->
+          <span class="text-secondary">Number of participants currently enrolled: {{ post.no_enrolled }} </span>
+        </strong>
+      </div>
+    </div>
   </div>
 </article>
 {% endblock content %}
