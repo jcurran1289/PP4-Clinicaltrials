@@ -69,12 +69,12 @@
                   {% if user.is_authenticated %}
                   <form class="d-inline" action="{% url 'post_enroll' post.slug %}" method="POST">
                     {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
-                      style="color: blue">Enroll</button>
-                    {% else %}
+                    {% if enrolled %}
                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
                       style="color: red">Leave</button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
+                    style="color: blue">Enroll</button>
                     {% endif %}
                   </form>
                   {% else %}
