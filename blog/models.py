@@ -35,6 +35,8 @@ class Post(models.Model):
     def no_enrolled(self):
         return self.no_participants.count()
 
+            
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")

@@ -24,7 +24,7 @@ class PostDetail(View):
             request, 
             "post_detail.html",
             {
-                "post":post,
+                "post": post,
                 "enrolled": enrolled,
             }
         
