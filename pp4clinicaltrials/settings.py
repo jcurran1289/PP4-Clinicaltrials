@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["pp4clinicaltrials.herokuapp.com", "localhost"]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-jcurran1289-pp4clinical-3qky35xv0hr.ws-us70.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-jcurran1289-pp4clinical-3qky35xv0hr.ws-us71.gitpod.io']
 
 # Application definition
 
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'django_filters',
     'blog',
 ]
 

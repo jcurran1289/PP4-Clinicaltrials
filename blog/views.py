@@ -57,3 +57,23 @@ class PostEnroll(View):
             post.no_participants.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+def search_ct(request):
+    if request.method =="POST":
+        searched =  request.POST['searched']
+
+        return render(
+            request,
+            "search_ct.html",
+            {
+                'searched':searched
+            },
+        )
+    else:
+            return render(
+            request,
+            "search_ct.html",
+            {
+    
+            },
+        )

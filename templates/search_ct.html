@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if searched %}
+        <h1>you got it {{ searched }}</h1>
+    {% else %}
+        <h2 class="post-title">you didn get anything</h2>
+    {% endif %}
+  
+
+
+
+{%endblock%}

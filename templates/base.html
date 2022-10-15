@@ -23,7 +23,7 @@
     <link
         href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
         rel='stylesheet' type='text/css'>
-  
+
     <!-- Custom styles for this template -->
     <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
 
@@ -66,6 +66,20 @@
             </div>
         </div>
     </nav>
+    <div class="card mb-4">
+        <div class="card-header">Search</div>
+        <div class="card-body">
+            <form class="input-group" method="POST" action="{% url 'search-ct' %}">
+
+                {% csrf_token %}
+
+                <input class="form-control" type="text" placeholder="Enter search term..."
+                    aria-label="Enter search term..." aria-describedby="button-search" name='searched'/>
+                <button class="btn btn-primary" id="button-search" type="submit">Go!</button>
+            </form>
+        </div>
+    </div>
+   
     {% block content %}
 
 
@@ -110,7 +124,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.0.slim.js"
-    integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
+        integrity="sha256-milezx5lakrZu0OP9b2QWFy1ft/UEUK6NH1Jqz8hUhQ=" crossorigin="anonymous"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
