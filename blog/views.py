@@ -61,12 +61,14 @@ class PostEnroll(View):
 def search_ct(request):
     if request.method =="POST":
         searched =  request.POST['searched']
+        search_post = Post.objects.filter(slug__contains =  searched)
 
         return render(
             request,
             "search_ct.html",
             {
-                'searched':searched
+                'searched':searched,
+                'search_post':search_post
             },
         )
     else:
