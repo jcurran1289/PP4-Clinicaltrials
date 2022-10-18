@@ -13,6 +13,7 @@ class Post(models.Model):
     prin_invest = models.CharField(max_length=200, default='name')
     contact_name = models.CharField(max_length=400, unique=False, default='name')
     contact_email = models.CharField(max_length=200, unique=False, default='null')
+    primary_disease = models.CharField(max_length=5000, blank=True)
     eligible_age_min = models.IntegerField(blank=False, default=0)
     eligible_age_max = models.IntegerField(blank=False, default=100)
     gender = models.IntegerField(choices=GENDER, default=0)
@@ -51,3 +52,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+class Question(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name="questions")
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Question {self.body} by {self.name}"

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+{% load crispy_forms_tags %}
 
 <body>
 
@@ -28,7 +28,7 @@
           <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
           {% else %}
           <!-- <img class="card-img-top" src=" {{ post.featured_image.url }}"> -->
-        <h1>itshhherr</h1>
+          <h1>itshhherr</h1>
           {% endif %}
           <!-- Post content-->
           <section class="mb-5">
@@ -91,9 +91,63 @@
                 </strong>
               </div>
             </div>
+
+            <section class="mb-5">
+              <div class="card bg-light">
+                <div class="card-body">
+                  <h3>Questions:</h3>
+                  <!-- Comment form-->
+                  <!-- <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Ask a question">
+
+                      </textarea></form> -->
+                  {% if asked %}
+                  <div class="alert alert-success" role="alert">
+                    Your question is awaiting approval
+                  </div>
+                  {% else %}
+                  {% if user.is_authenticated %}
+
+                  <h3>Ask a question:</h3>
+                  <p>Posting as: {{ user.username }}</p>
+                  <form method="post" class="mb-4">
+                    {{ question_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn-like">Submit</button>
+                  </form>
+                  {% endif %}
+                  {% endif %}
+                  <!-- Comment with nested comments-->
+                  <div class="d-flex mb-4">
+                    <!-- Parent comment-->
+
+                  </div>
+                  <!-- Single comment-->
+                  <div class="d-flex">
+                    <div class="ms-3">
+                      {% for question in questions %}
+                      <div class="fw-bold">Commenter Name</div>
+                      <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                          <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                          {{ question.name }}
+                          <span class=" text-muted font-weight-normal">
+                            <!-- The comment's created date goes here -->
+                            {{ question.created_on }}
+                          </span> wrote:
+                        </p>
+                        <!-- The body of the comment goes before the | -->
+                        {{ question.body | linebreaks }}
+                      </div>
+                      <!-- Our for loop ends here -->
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
           </section>
         </article>
-
       </div>
     </div>
   </div>
