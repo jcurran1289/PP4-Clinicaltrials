@@ -44,6 +44,15 @@
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
+            <div class="search-container">
+                <form class="input-group" method="POST" action="{% url 'search-ct' %}">
+                    
+                    {% csrf_token %}
+    
+                    <input class ="form-control" type="text" placeholder="Search.." name="searched">
+                    <button type="submit" id="button-search"><i class="fa fa-search"></i></button>
+                  </form>
+            </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -64,18 +73,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="search-container"> -->
-                <form class="input-group" method="POST" action="{% url 'search-ct' %}">
-                    
-                    {% csrf_token %}
-    
-                    <input class ="form-control" type="text" placeholder="Search.." name="searched">
-                    <button type="submit" id="button-search"><i class="fa fa-search"></i></button>
-                  </form>
-            <!-- </div> -->
         </div>
 
-    </nav>
+
+     </nav>
 
     {% block content %}
 
