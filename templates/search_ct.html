@@ -2,56 +2,60 @@
 
 {% block content %}
 
-    {% if searched %}
-        <h1>you got it {{ searched }}dsdsadsa</h1>
-        <br>
-        {% for post in search_post %}
-        <!-- {{ search_post }} </br> -->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Main Content -->
-        
-                    <!-- Content Goes here -->
-        
-                    <div class="container">
-        
-                        <!-- Post preview-->
-                        <div class="post-preview">
-                            <a href="{% url 'post_detail' post.slug %}">
-                                <h2 class="post-title">{{ post.title }}</h2>
-                                <h3 class="post-subtitle">{{ post.excerpt }}</h3>
-                            </a>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 post-meta ">
-                                    <p class="post-meta">
-                                    <b>Diseases:</b> {{ post.primary_disease }}
-                                    </p>
-                                </div>
-                                <div class="col-lg-4 col-md-4 post-meta ">
-                                    <p class="post-meta">
-                                    <b>Age:</b> {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
-                                    </p>
-                                </div>
-                                <div class="col-lg-4 col-md-4 post-meta gender">
-                                    <p class="post-meta">
-                                    <b>Gender:</b> {{post.gender}}
-                                    </p>
-                                </div>
-        
-                            </div>
+{% if searched %}
+<h4>Search Results for "{{ searched }}"</h4>
+
+
+{% for post in search_post %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="container">
+                <hr>
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a href="{% url 'post_detail' post.slug %}">
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        <h3 class="post-subtitle">{{ post.excerpt }}</h3>
+                    </a>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 post-meta ">
+                            <p class="post-meta">
+                                <b>Diseases:</b> {{ post.primary_disease }}
+                            </p>
                         </div>
+                        <div class="col-lg-4 col-md-4 post-meta ">
+                            <p class="post-meta">
+                                <b>Age:</b> {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 post-meta gender">
+                            <p class="post-meta">
+                                <b>Gender:</b> {{post.gender}}
+                            </p>
+                        </div>
+
                     </div>
-                    <hr class="my-4" />
                 </div>
             </div>
-           
+            <hr class="my-4" />
         </div>
-        {% endfor %}
-    {% else %}
-        <h2 class="post-title">you didn get anything</h2>
-    {% endif %}
-  
+    </div>
+
+</div>
+{% endfor %}
+{% else %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="container">
+                <h2 class="post-title">Please enter a disease to search</h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 
 
 
