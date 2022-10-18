@@ -80,7 +80,7 @@ class PostEnroll(View):
 def search_ct(request):
     if request.method =="POST":
         searched =  request.POST['searched']
-        search_post = Post.objects.filter(slug__contains =  searched)
+        search_post = Post.objects.filter(primary_disease__contains =  searched)
 
         return render(
             request,
