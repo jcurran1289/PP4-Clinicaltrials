@@ -3,7 +3,7 @@
 {% block content %}
 
     {% if searched %}
-        <h1>you got it {{ searched }}</h1>
+        <h1>you got it {{ searched }}dsdsadsa</h1>
         <br>
         {% for post in search_post %}
         <!-- {{ search_post }} </br> -->
@@ -25,17 +25,17 @@
                             <div class="row">
                                 <div class="col-4 post-meta ">
                                     <p class="post-meta">
-                                        Diseases:
+                                    <b>Diseases:</b> {{ post.primary_disease }}
                                     </p>
                                 </div>
                                 <div class="col-4 post-meta ">
                                     <p class="post-meta">
-                                        Age: {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
+                                    <b>Age:</b> {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
                                     </p>
                                 </div>
                                 <div class="col-4 post-meta gender">
                                     <p class="post-meta">
-                                        Gender: {{post.gender}}
+                                    <b>Gender:</b> {{post.gender}}
                                     </p>
                                 </div>
         

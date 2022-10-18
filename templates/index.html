@@ -36,17 +36,17 @@
                     <div class="row">
                         <div class="col-4 post-meta ">
                             <p class="post-meta">
-                                Diseases:
+                                <b>Diseases:</b> {{ post.primary_disease }}
                             </p>
                         </div>
                         <div class="col-4 post-meta ">
                             <p class="post-meta">
-                                Age: {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
+                            <b>Age:</b> {{ post.eligible_age_min }} - {{ post.eligible_age_max }}
                             </p>
                         </div>
                         <div class="col-4 post-meta gender">
                             <p class="post-meta">
-                                Gender: {{ post.get_gender_display }}
+                            <b>Gender:</b> {{ post.get_gender_display }}
                             </p>
                         </div>
 
