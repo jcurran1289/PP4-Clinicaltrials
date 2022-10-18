@@ -26,7 +26,8 @@
           <img class="card-img-top" src="url('static/img/base_header_pic.jpg ')" alt="post-image-default">
 
           {% else %}
-          <figure class="mb-0"><img class="figure-img img-fluid rounded" src=" {{ post.main_image.url }} " alt="post_image"></figure>
+          <figure class="mb-0"><img class="figure-img img-fluid rounded" src=" {{ post.main_image.url }} "
+              alt="post_image"></figure>
           {% endif %}
           <!-- Post content-->
           <section class="mb-5">
@@ -63,8 +64,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-6 col-md-6 mx-auto">
-                <p>Diseases:{{ post.primary_disease }}</p>
+              <div class="col-lg-12 col-md-12 mx-auto">
+                <p>Diseases: {{ post.primary_disease }}</p>
               </div>
             </div>
             <div class="row">
@@ -108,7 +109,6 @@
                 {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Ask a question:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" class="mb-4">
                   {{ question_form | crispy }}
@@ -140,7 +140,6 @@
                 </div>
               </div>
             </div>
-          </section>
 
           </section>
         </article>
