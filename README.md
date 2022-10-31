@@ -10,12 +10,15 @@ The idea of this project was based around the healthcare industry. This is a ind
 The user experience I wanted the user to be able to look and find the information as quickly as possible. The website is easy and straight forward to register and sign up to and I wanted the main content of the website to be accessible to all users and only registered users have the ability to enroll in a study.
 
 ## Design
+I wanted to keep the style of the website very simple so the focus would be on the clinicals trials.
+
+### Colours
+The wesbite is all white. I felt this would be the least distracting to the user when reviewing a trial.
 
 ### Icons
 
     The Icons used are created with the help of the following sites:
     - [fontawesome](https://fontawesome.com/start)
-    - [favicon](https://www.favicon.io/) 
 
 ## User stories
 My goal was to have give the user a simple a straight forward website to find a clinical trial. Alot of hospitals do not put alot of effort into their CT (clinical trial) websites. They usually just post a title of a CT and a few paragraphs about it using alot of medical terms. This can leave the user unsure what the actual disease that is being treated and if they are eligible or not. This website displays the disease and enrollment criteria very clearly for the user to see.
