@@ -80,6 +80,46 @@ This data model is used to store all the relevant information about a listed cli
 - [x] Create - Every registered and logged in user can ask questions to the study team about the study.
 - [x] Read - Every user can read the comments of other users
 
+### Navigation Bar:
+The navigation bar is simple and easy to use. It appears on all pages. They can always return to the home page  which displays the list of available trials. They can log in, register or log out.
+
+#### Search Bar:
+Within the navagation bar, there is a search function. this gives the users the ability to search for a study based on what disease the study researching. When a disease is searched, the search function returns a list of studies that have that disease listed under disease site
+
+### Home Page - Clinical Trial Study list
+In the homepage the user receives a welcome message to the site and can view all the featured stocks, scrolling down or going to the following pages.
+Each stock is represented by a card showing its logo, name and brief summary. 
+By clicking on a stock's card, the page links to its Stocks Detail Page.
+
+!IMAGE
+
+* ### Clinical Trial Detail Page
+Here the user can find the following sections:
+
+- TRIAL PAGE
+Here a user can view a clinical trial entered by the admin and all the details about that trial. When not registered you can still read the details about the trial, when logged in a user can enroll and ask the study team a question about the trail. 
+![Character page](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/character_page.png)
+
+![Chart and Fundamentals](docs/images/stock-detail-graph-fundamentals-view.png)
+
+ - Comments section, in which the user can see all the comments about the stock. 
+ Moreover, if logged in a user can post a comment through the specific form, or edit and delete (own) comments through the appropriate buttons. These active actions of the user are always followed by a confirmation message on the comment form.
+
+![Comments](docs/images/stock-detail-comment-view.png)
+
+
+- LOGIN
+Users who have already registered can login to the page and can leave comments and edit characters. 
+![Login](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signin.png)
+
+- REGISTER
+Users can sign up for an account if they do not already have one. 
+![Sign up](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signup.png)
+
+- LOGOUT
+Users who are logged in can easily log out. 
+![Sign out](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signout.png)
+
 ## Testing
 All the HTMl and CSS code works as expected and as well as going through the website manually, I have tested the HTML, CSS and Django code using third party validations such as Pep8 for Django and W3C validationf for HTML and CSS.
 
