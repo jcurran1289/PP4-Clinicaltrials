@@ -100,15 +100,12 @@
             <div class="card bg-light">
               <div class="card-body">
                 <h3>Questions:</h3>
-                {{ asked }}
-
                 {% if asked %}
                 <div class="alert alert-success" role="alert">
                   Your question is awaiting approval
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
-
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" class="mb-4">
                   {{ question_form | crispy }}
@@ -121,7 +118,6 @@
                 <div class="d-flex">
                   <div class="ms-3">
                     {% for question in questions %}
-                    <div class="fw-bold">questioner Name</div>
                     <div class="questions" style="padding: 10px;">
                       <p class="font-weight-bold">
                         <!-- The questioner's name goes here. Check the model if you're not sure what that is -->
@@ -140,7 +136,6 @@
                 </div>
               </div>
             </div>
-
           </section>
         </article>
       </div>

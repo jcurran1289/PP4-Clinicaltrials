@@ -17,7 +17,7 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        questions = post.questions.filter(approved=True).order_by("-created_on")
+        questions = post.questions.filter(approved=True).order_by("-created_on")  # noqa
         enrolled = False
         if post.no_participants.filter(id=self.request.user.id).exists():
             enrolled = True
@@ -43,7 +43,6 @@ class PostDetail(View):
         enrolled = False
         if post.no_participants.filter(id=self.request.user.id).exists():
             enrolled = True
-
         question_form = QuestionForm(data=request.POST)
         if question_form.is_valid():
             question_form.instance.email = request.user.email
