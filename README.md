@@ -4,6 +4,7 @@
 The idea of this project was based around the healthcare industry. This is a industry that i currently work in. With the recent COVID-19 pandemic brining the entire world to stand still, healthcare and more imprtantly, clinical research are in the spotlight more than ever before. This website allows users to search through clinical trials, view details about the trial and enroll in it. In order to enroll in a trial, a user mist first register on the website. With some many clinical trials out there, this website dispplays the trials in a nice compact and easy to read format.
 
 ## Version Control
+Github was used to track the progress of this project. You can see my commit messages at: https://github.com/KateEllen/Simpsons-fan-page/commits/main
 
 
 ## User Experience
