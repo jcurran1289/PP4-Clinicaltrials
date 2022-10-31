@@ -128,8 +128,22 @@ Users who are logged in can easily log out.
 
 ## Testing
 All the HTMl and CSS code works as expected and as well as going through the website manually, I have tested the HTML, CSS and Django code using third party validations such as Pep8 for Django and W3C validationf for HTML and CSS.
+## Testing
 
-## Validation 
+### Lighthouse Audit 
+!IMAGE
+
+### Validator Testing 
+#### W3C CSS Validation 
+Passed through the CSS validator with no errors.
+!IMAGE
+
+#### HTML Validator 
+All pages passed through HTML Validator with no errors.
+!IMAGE
+#### PEP8
+All python files passed through PEP8 with no errors. 
+!IMAGE
 
 ## Bugs
 See issues in github
