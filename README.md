@@ -152,7 +152,7 @@ All python files passed through PEP8 with no errors.
 !IMAGE
 
 ## Bugs
-See issues in github
+See issues in github: https://github.com/jcurran1289/PP4-Clinicaltrials/issues
 
 ## Deploying to Heroku
 Go onto Heroku
