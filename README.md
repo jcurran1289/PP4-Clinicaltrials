@@ -80,8 +80,6 @@ This data model is used to store all the relevant information about a listed cli
 | created_on | DateTimeField | To be shown below the question              | required but automatic      |
 | approved   | BooleanField  | To let admin approve before publishing      | required, auto is False (*) |
 
-(*) Please notice that in the current version and for better interactivity for the users, not yet approved comments are also shown on the site.
-
 - [x] Create - Every registered and logged in user can ask questions to the study team about the study.
 - [x] Read - Every user can read the comments of other users
 
@@ -95,41 +93,44 @@ Within the navigation bar, there is a search function. this gives the users the 
 
 ### Home Page - Clinical Trial Study list
 In the homepage the user receives a welcome message to the site and can view all the featured stocks, scrolling down or going to the following pages.
-Each stock is represented by a card showing its logo, name and brief summary. 
-By clicking on a stock's card, the page links to its Stocks Detail Page.
+On the hompage the user is welcomed by a large image of Clinical Trials at NCY hospital. When they scroll down they can see all the trials at the institute 
+Each trial post has the trial title and a brief summary of the trial underneath
+By clicking on a trial's title, the user is take to the trial page.
 
-!IMAGE
+![Homepage](static/img/Hompage.PNG)
 
-* ### Clinical Trial Detail Page
+### Clinical Trial Detail Page
 Here the user can find the following sections:
 
 - STUDY PAGE
 Here a user can view a clinical trial entered by the admin and all the details about that trial. When not registered you can still read the details about the trial, when logged in a user can enroll and ask the study team a question about the trail. 
 
-!IMAGE
+![Study Page](static/img/postdetail.PNG)
 
  - ENROLL SECTION
 Here a user can enroll in the trial if they like the trial. If they decide to leave the trial they can click on leave which removes them from the trial. The number of enrolled participants is also displayed in the section 
 
-!image
+![Enroll](static/img/enroll.PNG)
 
  - QUESTION SECTION 
 Here a user can ask the study team a question they have regarding the trial when they are logged in. They can also view previous questions users have asked. All questions asked are readable by registered and non-registered users
 
 !IMAGE
 
-- LOGIN
-Users who have already registered can login, enroll in studies and ask questions. 
+- SIGN IN
+Users who have already registered can sign in, enroll in studies and ask questions. 
 
-!IMAGE
+![SignIn](static/img/Signin.PNG)
 
 - REGISTER
 Users can sign up for an account if they do not already have one. 
-!IMAGE
 
-- LOGOUT
+![Register](static/img/register.PNG)
+
+- SIGN OUT
 Users who are logged in can easily log out. 
-!IMAGE
+
+![signout](static/img/signout.PNG)
 
 ## Testing
 All the HTMl and CSS code works as expected and as well as going through the website manually, I have tested the HTML, CSS and Django code using third party validations such as Pep8 for Django and W3C validation for HTML and CSS.
