@@ -23,7 +23,7 @@ class PostDetail(View):
             enrolled = True
 
         return render(
-            request, 
+            request,
             "post_detail.html",
             {
                 "post": post,
@@ -32,14 +32,13 @@ class PostDetail(View):
                 "enrolled": enrolled,
                 "question_form": QuestionForm()
             }
-        
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        questions = post.questions.filter(approved=True).order_by("-created_on")
+        questions = post.questions.filter(approved=True).order_by("-created_on")  # noqa
         enrolled = False
         if post.no_participants.filter(id=self.request.user.id).exists():
             enrolled = True
@@ -65,8 +64,9 @@ class PostDetail(View):
             },
         )
 
+
 class PostEnroll(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.no_participants.filter(id=request.user.id).exists():
@@ -76,24 +76,24 @@ class PostEnroll(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 def search_ct(request):
-    if request.method =="POST":
-        searched =  request.POST['searched']
-        search_post = Post.objects.filter(primary_disease__contains =  searched)
+    if request.method == "POST":
+        searched = request.POST['searched']
+        search_post = Post.objects.filter(primary_disease__contains=searched)
 
         return render(
             request,
             "search_ct.html",
             {
-                'searched':searched,
-                'search_post':search_post
+                'searched': searched,
+                'search_post': search_post
             },
         )
     else:
-            return render(
+        return render(
             request,
             "search_ct.html",
             {
-    
             },
         )
