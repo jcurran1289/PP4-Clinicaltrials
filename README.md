@@ -132,6 +132,17 @@ Users who are logged in can easily log out.
 
 ![signout](static/img/signout.PNG)
 
+## Future Feautures
+
+- 404 page
+A modified 404 page to suit the style of the website.
+
+- 500 page
+A modified 500 page to suit the style of the website.
+
+- CT.gov API
+Incorporate the CT.gov api on the website so the admin would not have to enter studies 
+
 ## Testing
 All the HTMl and CSS code works as expected and as well as going through the website manually, I have tested the HTML, CSS and Django code using third party validations such as Pep8 for Django and W3C validation for HTML and CSS.
 ## Testing
