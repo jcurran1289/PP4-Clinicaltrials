@@ -341,4 +341,18 @@ Go to Deploy
 Connect to github login.
 Search for the project you wish to connect. Once found click the connect button After this I click the deploy button at the bottom.
 
-## Tech used
+
+## Credits
+
+### Content Credits
+- Clinical trials details were found at: https://www.mountsinai.org/clinical-trials
+
+### Code Credits 
+- Bootstrap template was found at: https://startbootstrap.com/
+- The code structure is based on the material provided during the Code Institute course, especially from the I think therefore i blog walkthrough project.
+
+ ### Media Credits
+- Site images were found at : https://unsplash.com/s/photos/html
+
+## Acknowledgments
+- I  had help from my amazing mentor Malia. 
