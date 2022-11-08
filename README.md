@@ -1,9 +1,6 @@
 # Clinical Trials at NYC Hospital
 
 ## Introduction
-The idea of this project was based around the healthcare industry. This is a industry that i currently work in. With the recent COVID-19 pandemic brining the entire world to stand still, healthcare and more imprtantly, clinical research are in the spotlight more than ever before. This website allows users to search through clinical trials, view details about the trial and enroll in it. In order to enroll in a trial, a user m# Clinical Trials at NYC Hospital
-
-## Introduction
 The idea of this project was based around the healthcare industry. This is an industry that I currently work in. With the recent COVID-19 pandemic brining the entire world to stand still, healthcare and more importantly, clinical research are in the spotlight more than ever before. This website allows users to search through clinical trials, view details about the trial and enroll in it. In order to enroll in a trial, a user mist first register on the website. With some many clinical trials out there, this website displays the trials in a nice compact and easy to read format.
 
 ## Version Control
@@ -145,12 +142,12 @@ Incorporate the CT.gov api on the website so the admin would not have to enter s
 
 ## Testing
 All the HTMl and CSS code works as expected and as well as going through the website manually, I have tested the HTML, CSS and Django code using third party validations such as Pep8 for Django and W3C validation for HTML and CSS.
-## Testing
 
 ### Lighthouse Audit 
 ![lighthouse](static/img/lighthouse.PNG)
 
 ### Validator Testing 
+
 #### W3C CSS Validation 
 Passed through the CSS validator with no errors.
 !IMAGE
@@ -158,9 +155,10 @@ Passed through the CSS validator with no errors.
 #### HTML Validator 
 All pages passed through HTML Validator with no errors.
 !IMAGE
+
 #### PEP8
-All python files passed through PEP8 with no errors. 
-!IMAGE
+All python files passed through PEP8 validator in the Gitpod Workspace with no errors. 
+![python_val](static/img/python_val.PNG)
 
 ## Bugs
 See issues in github: https://github.com/jcurran1289/PP4-Clinicaltrials/issues
