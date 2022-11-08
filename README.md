@@ -117,7 +117,7 @@ Here a user can ask the study team a question they have regarding the trial when
 - SIGN IN
 Users who have already registered can sign in, enroll in studies and ask questions. 
 
-![SignIn](static/img/Signin.PNG)
+![SignIn](static/img/signin.PNG)
 
 - REGISTER
 Users can sign up for an account if they do not already have one. 
@@ -150,11 +150,11 @@ All the HTMl and CSS code works as expected and as well as going through the web
 
 #### W3C CSS Validation 
 Passed through the CSS validator with no errors.
-!IMAGE
+![CSS_VAl](static/img/CSS_val.PNG)
 
 #### HTML Validator 
 All pages passed through HTML Validator with no errors.
-!IMAGE
+![HTML_VAl](static/img/HTML_VAl.PNG)
 
 #### PEP8
 All python files passed through PEP8 validator in the Gitpod Workspace with no errors. 
