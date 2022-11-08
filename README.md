@@ -148,7 +148,7 @@ All the HTMl and CSS code works as expected and as well as going through the web
 ## Testing
 
 ### Lighthouse Audit 
-!IMAGE
+![lighthouse](static/img/lighthouse.PNG)
 
 ### Validator Testing 
 #### W3C CSS Validation 
@@ -180,7 +180,6 @@ Search for the project you wish to connect. Once found click the connect button 
 
 ## Tech used
 ist first register on the website. With some many clinical trials out there, this website displays the trials in a nice compact and easy to read format.
-
 
 ## Credits
 
