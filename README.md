@@ -192,4 +192,4 @@ ist first register on the website. With some many clinical trials out there, thi
 - Site images were found at : https://unsplash.com/s/photos/html
 
 ## Acknowledgments
-- I  had help from my amazing mentor Malia. 
+- I  had help from my amazing mentor Malia...amazing is an understatement!  
