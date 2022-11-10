@@ -4,7 +4,7 @@
 The idea of this project was based around the healthcare industry. This is an industry that I currently work in. With the recent COVID-19 pandemic brining the entire world to stand still, healthcare and more importantly, clinical research are in the spotlight more than ever before. This website allows users to search through clinical trials, view details about the trial and enroll in it. In order to enroll in a trial, a user mist first register on the website. With some many clinical trials out there, this website displays the trials in a nice compact and easy to read format.
 
 ## Version Control
-Github was used to track the progress of this project. You can see my commit messages at: https://github.com/jcurran1289/PP4-Clinicaltrials/commits/main
+Github was used to track the progress of this project. You can see my commit messages at: https://github.com/jcurran1289/PP4-Clinicaltrials/commits/main. Heroku App: https://pp4clinicaltrials.herokuapp.com/
 
 ## User Experience
 The user experience I wanted the user to be able to look and find the information as quickly as possible. The website is easy and straight forward to register and sign up to. I wanted the main content of the website to be accessible to all users while only registered users have the ability to enroll in a study.
