@@ -20,7 +20,9 @@
           </header>
           <!-- Preview image figure-->
           {% if "placeholder" in post.main_image.url %}
-          <img class="card-img-top" src="url('static/img/base_header_pic.jpg ')" alt="post-image-default">
+          <figure class="mb-0"><img class="card-img-top" 
+            src="https://res.cloudinary.com/dzmhuvuj3/image/upload/v1668094680/static/img/base_header_pic.40665af3d4dd.jpg" 
+            alt="post-image-default"></figure>
 
           {% else %}
           <figure class="mb-0"><img class="figure-img img-fluid rounded" src=" {{ post.main_image.url }} "
@@ -33,7 +35,7 @@
                 <p><b>Principal Investigator:</b> {{post.prin_invest}}</p>
               </div>
               <div class="col-lg-6 col-md-6">
-                <p><b>IRB Number:</b> {{post.irb_number}}</p>
+                <p><b>IRB Number:</b> {{post.IRB_number}}</p>
               </div>
             </div>
             <div class="row">
