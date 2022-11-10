@@ -46,12 +46,12 @@
             </button>
             <div class="search-container">
                 <form class="input-group" method="POST" action="{% url 'search-ct' %}">
-                    
+
                     {% csrf_token %}
-    
-                    <input class ="form-control" type="text" placeholder="Search by Disease" name="searched">
+
+                    <input class="form-control" type="text" placeholder="Search by Disease" name="searched">
                     <button type="submit" id="button-search"><i class="fa fa-search"></i></button>
-                  </form>
+                </form>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -75,22 +75,22 @@
         </div>
 
 
-     </nav>
+    </nav>
 
     </div>
     <main>
-      {% if messages %}
-      <div class="container alert alert-success" id="msg">
-        <strong>Messages:</strong>
-        <ul>
-          {% for message in messages %}
-          <li>{{message}}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}  
-          {% block content %}  
-      {% endblock content%}
+        {% if messages %}
+        <div class="container alert alert-success" id="msg">
+            <strong>Messages:</strong>
+            <ul>
+                {% for message in messages %}
+                <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% block content %}
+        {% endblock content%}
     </main>
     <hr>
 
@@ -147,9 +147,6 @@
             alert.close();
         }, 2500);
     </script>
-    {% block postload_js %}
-    {% endblock %}
-
 
 </body>
 
